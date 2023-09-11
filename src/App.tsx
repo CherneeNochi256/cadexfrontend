@@ -19,7 +19,7 @@ function App() {
     event.preventDefault();
 
     try {
-      const apiTriangulationResponse = await axios.get<ITriangle[]>("http://localhost:8080/api/v1/triangulation", {
+      const apiTriangulationResponse = await axios.get<ITriangle[]>("https://cadex-backend.onrender.com/api/v1/triangulation", {
         params: {height, radius, segments}
       })
       setTriangulation(apiTriangulationResponse.data);
